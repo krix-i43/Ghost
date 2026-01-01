@@ -1,6 +1,6 @@
-
 Flask==2.3.3
 requests==2.31.0
+httpx==0.25.2
 PyJWT==2.8.0
 protobuf==4.24.3
 psutil==5.9.5
