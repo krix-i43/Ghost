@@ -572,12 +572,12 @@ class TcpBotConnectMain:
                     got_0500 = False
                     attempt_counter = 0
 
-                    while not got_0500 and attempt_counter < 20:
+                    while not got_0500 and attempt_counter < 100:
                         attempt_counter += 1
                         print(f"[{self.account_id}] Attempt {attempt_counter} joining/exiting squad {self.id}...")
 
                         self.socket_client.send(GenJoinSquadsPacket(self.id, self.key, self.iv))
-                        time.sleep(3)
+                        time.sleep(0.5)
                         self.socket_client.send(ExiT('000000', self.key, self.iv))
                         time.sleep(0.01)
 
