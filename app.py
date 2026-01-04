@@ -219,7 +219,7 @@ class TcpBotConnectMain:
                                         sq = shared_0500_info['squad']
                                         for _ in range(3):
                                             self.socket_client.send(GenJoinSquadsPacket(idT, key, iv))
-                                            time.sleep(0.5)
+                                            time.sleep(1)
                                             self.socket_client.send(ExiT('000000', key, iv))
                                             self.socket_client.send(ghost_pakcet(idT, "insta:kha_led_mhd", sq, key, iv))
                                             time.sleep(0.5)
@@ -537,7 +537,7 @@ class TcpBotConnectMain:
                         return "Timeout waiting for master account to get 0500"
 
                     self.socket_client.send(GenJoinSquadsPacket(shared_0500_info['idT'], self.key, self.iv))
-                    time.sleep(0.5)
+                    time.sleep(1)
                     self.socket_client.send(ExiT('000000', self.key, self.iv))
                     self.socket_client.send(ghost_pakcet(shared_0500_info['idT'], self.nm, shared_0500_info['squad'], self.key, self.iv))
                     
@@ -577,7 +577,7 @@ class TcpBotConnectMain:
                         print(f"[{self.account_id}] Attempt {attempt_counter} joining/exiting squad {self.id}...")
 
                         self.socket_client.send(GenJoinSquadsPacket(self.id, self.key, self.iv))
-                        time.sleep(0.5)
+                        time.sleep(1)
                         self.socket_client.send(ExiT('000000', self.key, self.iv))
                         time.sleep(0.01)
 
@@ -625,7 +625,7 @@ class TcpBotConnectMain:
                         return "Timeout waiting for master account to get 0500"
 
                     self.socket_client.send(GenJoinSquadsPacket(shared_0500_info['idT'], self.key, self.iv))
-                    time.sleep(0.5)
+                    time.sleep(1)
                     self.socket_client.send(ExiT('000000', self.key, self.iv))
                     self.socket_client.send(ghost_pakcet(shared_0500_info['idT'], self.nm, shared_0500_info['squad'], self.key, self.iv))
                     
